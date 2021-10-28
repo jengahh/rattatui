@@ -17,6 +17,7 @@ import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
 import flixel.util.FlxColor;
 import lime.app.Application;
+import flixel.util.FlxTimer;
 import Achievements;
 import editors.MasterEditorMenu;
 
@@ -211,7 +212,19 @@ class MainMenuState extends MusicBeatState
 								switch (daChoice)
 								{
 									case 'story_mode':
-										MusicBeatState.switchState(new StoryMenuState());
+										PlayState.storyPlaylist = ['desperate','bigratta']; //Song Here
+										PlayState.isStoryMode = true;
+							
+										PlayState.storyDifficulty = 2;
+							
+										PlayState.SONG = Song.loadFromJson(StringTools.replace(PlayState.storyPlaylist[0]," ", "-").toLowerCase() + '-hard', StringTools.replace(PlayState.storyPlaylist[0]," ", "-").toLowerCase());
+										//PlayState.storyWeek = 7;
+										PlayState.campaignScore = 0;
+										new FlxTimer().start(1, function(tmr:FlxTimer)
+										{
+											LoadingState.loadAndSwitchState(new PlayState(), true);
+											FreeplayState.destroyFreeplayVocals();
+										}); 
 									case 'freeplay':
 										MusicBeatState.switchState(new FreeplayState());
 									case 'awards':
