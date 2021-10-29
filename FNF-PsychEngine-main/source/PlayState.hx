@@ -380,6 +380,18 @@ class PlayState extends MusicBeatState
 					add(stageCurtains);
 				}
 
+			case 'rat':
+			{
+				defaultCamZoom = 1;
+				curStage = 'rat';
+				var bg:FlxSprite = new FlxSprite(-281, -70).loadGraphic(Paths.image('rat/rat'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(0.9, 0.9);
+				bg.active = false;
+				add(bg);
+
+			}
+
 			case 'spooky': //Week 2
 				if(!ClientPrefs.lowQuality) {
 					halloweenBG = new BGSprite('halloween_bg', -200, -100, ['halloweem bg0', 'halloweem bg lightning strike']);
@@ -701,12 +713,6 @@ class PlayState extends MusicBeatState
 		if(gfVersion == null || gfVersion.length < 1) {
 			switch (curStage)
 			{
-				case 'limo':
-					gfVersion = 'gf-car';
-				case 'mall' | 'mallEvil':
-					gfVersion = 'gf-christmas';
-				case 'school' | 'schoolEvil':
-					gfVersion = 'gf-pixel';
 				default:
 					gfVersion = 'gf';
 			}
@@ -1009,7 +1015,7 @@ class PlayState extends MusicBeatState
 					schoolIntro(doof);
 				case 'desperate':
 					startVideo('cut1');
-				case 'bigratta':
+				case 'rattatui':
 					startVideo('cut2'); // cutscene here
 
 				default:

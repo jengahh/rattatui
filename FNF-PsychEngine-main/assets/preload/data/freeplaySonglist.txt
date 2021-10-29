@@ -1,2 +1,3 @@
-bigratta:0xFF9271FD:bigratta
-desperate:0xFF9271FD:rattaood
+desperate:0xFFFFFFF:rattaood
+rattatui:0xFFFFFFF:rattatui
+bigratta:0xFFFFFFF:bigratta

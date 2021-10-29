@@ -212,7 +212,7 @@ class MainMenuState extends MusicBeatState
 								switch (daChoice)
 								{
 									case 'story_mode':
-										PlayState.storyPlaylist = ['desperate','bigratta']; //Song Here
+										PlayState.storyPlaylist = ['desperate','rattatui','bigratta']; //Song Here
 										PlayState.isStoryMode = true;
 							
 										PlayState.storyDifficulty = 2;
