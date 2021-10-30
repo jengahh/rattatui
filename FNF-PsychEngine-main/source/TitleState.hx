@@ -476,10 +476,9 @@ class TitleState extends MusicBeatState
 				// credTextShit.text = 'In association \nwith';
 				// credTextShit.screenCenter();
 				case 5:
-					createCoolText(['This is a mod to'], -60);
+					createCoolText(['Jeng_Battery And The Friends'], -60);
 				case 7:
-					addMoreText('This game right below lol', -60);
-					logoSpr.visible = true;
+					addMoreText('Present', -60);
 				// credTextShit.text += '\nNewgrounds';
 				case 8:
 					deleteCoolText();
@@ -500,13 +499,13 @@ class TitleState extends MusicBeatState
 				// credTextShit.text = "Friday";
 				// credTextShit.screenCenter();
 				case 13:
-					addMoreText('Friday');
+					addMoreText('WHAT DA');
 				// credTextShit.visible = true;
 				case 14:
-					addMoreText('Night');
+					addMoreText('RAT');
 				// credTextShit.text += '\nNight';
 				case 15:
-					addMoreText('Funkin'); // credTextShit.text += '\nFunkin';
+					addMoreText('DOING'); // credTextShit.text += '\nFunkin';
 
 				case 16:
 					skipIntro();

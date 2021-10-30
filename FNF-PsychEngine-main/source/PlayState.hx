@@ -289,7 +289,7 @@ class PlayState extends MusicBeatState
 		// String that contains the mode defined here so it isn't necessary to call changePresence for each mode
 		if (isStoryMode)
 		{
-			detailsText = "Story Mode: " + WeekData.getCurrentWeek().weekName;
+			detailsText = "Story Mode: " +"Rattatui";
 		}
 		else
 		{
@@ -384,7 +384,18 @@ class PlayState extends MusicBeatState
 			{
 				defaultCamZoom = 1;
 				curStage = 'rat';
-				var bg:FlxSprite = new FlxSprite(-281, -70).loadGraphic(Paths.image('rat/rat'));
+				var bg:FlxSprite = new FlxSprite(-281, -70).loadGraphic(Paths.image('rat/rat2'));
+				bg.antialiasing = true;
+				bg.scrollFactor.set(0.9, 0.9);
+				bg.active = false;
+				add(bg);
+
+			}
+			case 'rat2':
+			{
+				defaultCamZoom = 1;
+				curStage = 'rat2';
+				var bg:FlxSprite = new FlxSprite(-281, -70).loadGraphic(Paths.image('rat/rat2'));
 				bg.antialiasing = true;
 				bg.scrollFactor.set(0.9, 0.9);
 				bg.active = false;
@@ -2776,6 +2787,12 @@ class PlayState extends MusicBeatState
 	public function moveCamera(isDad:Bool) {
 		if(isDad) {
 			camFollow.set(dad.getMidpoint().x + 150, dad.getMidpoint().y - 100);
+			switch (dad.curCharacter)
+			{
+				case 'rattatui':
+						camFollow.x = dad.getMidpoint().x + 200;
+						camFollow.y = dad.getMidpoint().y - 200;
+			}
 			camFollow.x += dad.cameraPosition[0];
 			camFollow.y += dad.cameraPosition[1];
 			tweenCamIn();
@@ -2912,14 +2929,14 @@ class PlayState extends MusicBeatState
 
 				if (storyPlaylist.length <= 0)
 				{
-					FlxG.sound.playMusic(Paths.music('freakyMenu'));
+				//	FlxG.sound.playMusic(Paths.music('freakyMenu'));
 
 					cancelFadeTween();
 					CustomFadeTransition.nextCamera = camOther;
 					if(FlxTransitionableState.skipNextTransIn) {
 						CustomFadeTransition.nextCamera = null;
 					}
-					MusicBeatState.switchState(new StoryMenuState());
+					MusicBeatState.switchState(new Ded());
 
 					// if ()
 					if(!usedPractice) {

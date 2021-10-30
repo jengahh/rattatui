@@ -25,11 +25,12 @@ class CreditsState extends MusicBeatState
 
 	private static var creditsStuff:Array<Dynamic> = [ //Name - Icon name - Description - Link - BG Color
 		['vsood rattatui '],
-		['jeng battery',		'jeng',		        'artist leader',					                'https://twitter.com/jeng_wanna_kk',	0xFFFFFFFF],
-		['taeyai',				'tae',		        'coder Programmer',					                'https://twitter.com/Taeyai_',			0xFFFFFFFF],
+		['jeng battery',		'jeng',		        'artist leader & Lead Programmer',					                'https://twitter.com/jeng_wanna_kk',	0xFF2cc955],
+		['taeyai',				'tae',		        'Coding Help And Clean Up',					                'https://twitter.com/Taeyai_',			0xFF1DDDFF],
 		['Over nai',			'nai',		        'artist',					               		    'https://www.youtube.com/channel/UCKdBzLybMYXQqj_mzRgMnPQ',			0xFFFFFFFF],
-		['bosszaHD',			'bossza',		    'chart',					               		    'https://www.youtube.com/c/BosszaHDv2IttipattsKittikachorntira',			0xFFFFFFFF],
-		['biggy remix',			'biggy',		    'music composter',					                'https://www.youtube.com/channel/UCswKUjsdwe9NngeRodjlzzQ',		        	0xFFFFFFFF],
+		['bosszaHD',			'bossza',		    'chart',					               		    'https://www.youtube.com/c/BosszaHDv2IttipattsKittikachorntira',			0xFF1c662f],
+		['biggy remix',			'biggy',		    'music composter',					                'https://www.youtube.com/channel/UCswKUjsdwe9NngeRodjlzzQ',		        	0xFFC30085],
+		[''],
 		['Psych Engine Team'],
 		['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',					'https://twitter.com/Shadow_Mario_',	0xFFFFDD33],
 		['RiverOaken',			'riveroaken',		'Main Artist/Animator of Psych Engine',				'https://twitter.com/river_oaken',		0xFFC30085],
